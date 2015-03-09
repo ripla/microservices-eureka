@@ -1,5 +1,9 @@
 server:
-  port: 9000
+  port: ${PORT:9000}
+
+security:
+  user:
+    password: ${EUREKA_USER_PASSWORD:eureka.password}
 
 spring:
   cloud:
@@ -14,5 +18,3 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-  server:
-    waitTimeInMsWhenSyncEmpty: 0

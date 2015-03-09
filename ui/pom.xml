@@ -22,7 +22,7 @@
         <vaadin4spring.version>0.0.4.RELEASE</vaadin4spring.version>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <start-class>org.vaadin.risto.microservices.ui.Application</start-class>
+        <start-class>org.vaadin.risto.microservices.Application</start-class>
     </properties>
 
     <repositories>
@@ -121,11 +121,14 @@
 
     <build>
         <plugins>
-
             <plugin>
                 <groupId>com.vaadin</groupId>
                 <artifactId>vaadin-maven-plugin</artifactId>
                 <version>${vaadin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

@@ -18,4 +18,4 @@ spring:
 spring:
   profiles: cloud
 
-memcache-url:
+memcache-url: ${MEMCACHE_URL:memcache_url}

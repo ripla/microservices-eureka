@@ -12,3 +12,13 @@ spring:
   cloud:
     config:
       enabled: false
+
+---
+
+spring:
+	profile: cloud
+
+eureka:
+	client:
+		serviceUrl: 
+			defaultZone: ${EUREKA_HOST_URL}
