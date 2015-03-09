@@ -3,7 +3,7 @@ server:
 
 security:
   user:
-    password: ${EUREKA_USER_PASSWORD:eureka.password}
+    password: ${eureka.password}
 
 spring:
   cloud:
@@ -18,3 +18,4 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  password: ${EUREKA_USER_PASSWORD:eureka.password}
