@@ -16,9 +16,9 @@ spring:
 ---
 
 spring:
-	profile: cloud
+  profile: cloud
 
 eureka:
-	client:
-		serviceUrl: 
-			defaultZone: ${EUREKA_HOST_URL}
+  client:
+    serviceUrl: 
+      defaultZone: ${EUREKA_HOST_URL}
