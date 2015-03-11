@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:9000}
+  port: 9000
 
 security:
   user:
@@ -18,4 +18,16 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-  password: ${EUREKA_USER_PASSWORD:eureka.password}
+  password: ${eureka.password}
+
+---
+
+spring:
+  profiles: cloud
+
+security:
+  user:
+    password: ${EUREKA_USER_PASSWORD}
+
+eureka:
+  password: ${EUREKA_USER_PASSWORD}
