@@ -4,55 +4,28 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.vaadin.risto.microservices</groupId>
-	<artifactId>example-parent</artifactId>
+	<artifactId>eureka-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 
-	<name>Microservices example</name>
-	<description>Microservices example with Spring and Vaadni</description>
+	<name>Eureka server</name>
+	<description>Example Eureka service for discovery</description>
 
     <parent>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-parent</artifactId>
-        <version>1.0.0.RELEASE</version>
+        <groupId>org.vaadin.risto.microservices</groupId>
+        <artifactId>example-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <modules>
-        <module>eureka-server</module>
-        <module>students-rest-microservice</module>
-        <module>ui</module>
-    </modules>
-
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
+		<start-class>org.vaadin.risto.microservices.student.EurekaApplication</start-class>
 	</properties>
     
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-parent</artifactId>
-                <version>1.0.0.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-    
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+        </dependency>
+        
 	</dependencies>
-
-	<build>
-		<plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-		</plugins>
-	</build>
 </project>
