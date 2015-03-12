@@ -18,7 +18,6 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-  password: ${eureka.password}
 
 ---
 
